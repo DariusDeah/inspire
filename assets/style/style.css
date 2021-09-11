@@ -1,1 +1,5 @@
 /* BASIC STYLES HERE */
+.crossout {
+  text-decoration: line-through;
+  background-color: brown !important;
+}

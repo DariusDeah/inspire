@@ -32,12 +32,37 @@
         </div>
       </div>
     </div>
+    <section>
+      <div class="col-2" id="weather">
+      </div>
+    </section>
+    <section>
+      <div class="card" style="width: 18rem;">
+        <div class="card-header p-3 d-flex justify-content-between">
+          <h2>Todo-List <button class="btn btn-danger" onclick="app.taskController.deleteAllTask()">delete all</button>
+          </h2>
+        </div>
+        <ul class="list-group list-group-flush" id="task">
+        </ul>
+        <footer>
+          <h5>enter new todo </h5>
+          <form class="form" onsubmit="app.taskController.addTask(event)">
+            <input type="text" name="name">
+            <button type="submit" class="btn btn-dark">+</button>
+          </form>
+        </footer>
+
+      </div>
+    </section>
   </main>
   <footer class="bg-dark text-light">
     <div class="text-center no-select">
       <p><small>Made with 💖 by Codeworks</small></p>
     </div>
   </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.4/axios.min.js"
+    integrity="sha512-lTLt+W7MrmDfKam+r3D2LURu0F47a3QaW5nF0c6Hl0JDZ57ruei+ovbg7BrZ+0bjVJ5YgzsAWE+RreERbpPE1g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
