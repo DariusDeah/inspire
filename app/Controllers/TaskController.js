@@ -15,8 +15,8 @@ let template = '';
 export class TaskController{
   constructor() {
     ProxyState.on('tasks', _drawTask)
-    
     taskService.getTask()
+    taskService.countCompletedTask()
   }
 
   async addTask(event) {
@@ -68,7 +68,7 @@ form.reset()
     }
     taskService.getTask()
   }
-  
+
   /**
    * @param {any} id
    */
@@ -82,11 +82,12 @@ alert('Confirm Task Delete')
       console.error('delete tc broken')
     }
   }
-  // async deleteAllTask() {
-  //   try {
-  //     await taskService.deleteAllTask()
-  //   } catch (error) {
-  //     console.error('isuue with delete all',error)
-  //   }
+  async countTask(id) {
+    try {
+      await taskService.countCompletedTask()
+    } catch (error) {
+      console.error('count task broke in tc',error)
+    }
+  }
   
 }

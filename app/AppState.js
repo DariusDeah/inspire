@@ -8,6 +8,8 @@ class AppState extends EventEmitter {
   weather = null
   /** @type {import('./Models/Task').Task[]} */
   tasks = []
+   /** @type {import('./Models/Task').Task[]} */
+  doneTasks = []
 }
 
 export const ProxyState = new Proxy(new AppState(), {

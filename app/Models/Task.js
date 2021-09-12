@@ -13,8 +13,8 @@ export class Task{
     return /*html*/`
  <div class="">
    <li class="list-group-item d-flex justify-content-between ${this.completed == true ? 'crossout':''}" >
-<button class="btn btn-warning" onclick="app.taskController.undoCheckTask('${this.id}')">undo</button>
- <button class="btn btn-primary" onclick="app.taskController.checkTask('${this.id}')">✔</button>
+<button class="btn btn-warning  ${this.completed == false ? 'visually-hidden':''}" onclick="app.taskController.undoCheckTask('${this.id}')">undo</button>
+ <button class="btn border border-success  ${this.completed == true ? 'visually-hidden':''} " onclick="app.taskController.checkTask('${this.id}')">✔</button>
  ${this.description}
  <div>
  <button class="btn btn-danger" onclick="app.taskController.deleteTask('${this.id}')">X</button>
