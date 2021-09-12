@@ -10,6 +10,8 @@ class AppState extends EventEmitter {
   tasks = []
    /** @type {import('./Models/Task').Task[]} */
   doneTasks = []
+  /** @type {import('./Models/Image').Image} */
+  img = null
 }
 
 export const ProxyState = new Proxy(new AppState(), {
