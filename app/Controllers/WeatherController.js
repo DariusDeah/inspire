@@ -32,4 +32,14 @@ export class WeatherController{
       console.error('weather service broken',error)
     }
   }
+  changeTempStatus() {
+    if (document.getElementById('temp-status').innerHTML == `${ProxyState.weather.celsi}`) {
+      document.getElementById('temp-status').innerHTML = `${ProxyState.weather.faren}`
+       document.getElementById('temp-symbol').innerHTML = 'F'
+    } else {
+      document.getElementById('temp-status').innerHTML = `${ProxyState.weather.celsi}`
+      document.getElementById('temp-symbol').innerHTML = 'C'
+    }
+   
+  }
 }

@@ -13,7 +13,9 @@ export class Weather{
     <div class="text-center">
 <img src="http://openweathermap.org/img/wn/${this.icon}.png" alt="">
     </div>
-    <h3>${this.faren}°</h3>
+    <div class="d-flex">
+    <h3 id="temp-status">${this.faren}</h3><span>°</span> <span id="temp-symbol">F</span>
+    </div>
   </div>`
   }
 }
