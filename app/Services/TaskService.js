@@ -42,8 +42,11 @@ class TaskService{
     console.log(res)
     ProxyState.tasks = ProxyState.tasks.filter(d => d.id !== id)
   }
-  async deleteAllTask() {
-   let res =
- }
+
+//   async deleteAllTask(id) {
+//     let res = await sanndboxApi.delete(`darius/todos`,id)
+//     console.log(res.data)
+//     ProxyState.tasks = []
+//  }
 }
 export const taskService = new TaskService();

@@ -55,16 +55,18 @@ form.reset()
    */
   async deleteTask(id) {
     try {
+      
       await taskService.deleteTask(id)
+      
     } catch (error) {
       console.error('delete tc broken')
     }
   }
-  async deleteAllTask() {
-    try {
-      await taskService.deleteAllTask()
-    } catch (error) {
-      console.error('isuue with delete all',error)
-    }
-  }
+  // async deleteAllTask() {
+  //   try {
+  //     await taskService.deleteAllTask()
+  //   } catch (error) {
+  //     console.error('isuue with delete all',error)
+  //   }
+  
 }
