@@ -49,7 +49,23 @@ form.reset()
     }
   }
 
- 
+  async checkTask(id) {
+    try {
+      await taskService.checkOffTask(id)
+      console.log(id)
+    } catch(error) {
+      console.error('problem with the check task in task controller',error)
+    }
+    taskService.getTask()
+  }
+  
+  async undoCheckTask(id) {
+    try {
+      await taskService.undoCheckOffTask(id)
+    } catch (error) {
+      console.error()
+    }
+  }
   /**
    * @param {any} id
    */

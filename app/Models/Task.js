@@ -12,7 +12,7 @@ export class Task{
   get taskTemplate() {
     return /*html*/`
  <div class="selectable">
-   <li class="list-group-item d-flex justify-content-between ${this.completed == true ? 'crossout':''}"  >
+   <li class="list-group-item d-flex justify-content-between ${this.completed == true ? 'crossout':''}" onclick="app.taskController.checkTask('${this.id}')"  >
 
  <button class="btn btn-primary">✔</button>
  ${this.description}

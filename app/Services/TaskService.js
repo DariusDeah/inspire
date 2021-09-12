@@ -22,9 +22,20 @@ class TaskService{
 
   }
 
-  // async checkOffTask(taskData) {
-  //   let res = await sanndboxApi.put('darius/todos',)
-  // }
+  async checkOffTask(id) {
+    let res = await sanndboxApi.put(`darius/todos/${id}`, { completed: true })
+ 
+
+    console.log(res.data.completed)
+  }
+
+  async undoCheckOffTask(id) {
+    let res = await sanndboxApi.get(`darius/todos/${id}`)
+    
+if (res.data.completed == true) {
+res.data.completed = !res.data.completed
+    }
+}
 
   async deleteTask(id) {
     console.log(id);
