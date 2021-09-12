@@ -9,7 +9,7 @@ export class Weather{
   }
   get weatherTemplate() {
      return /*html*/`
-  <div class="card selectable " onclick="app.weatherController.changeTempStatus()" style="height:8rem;">
+  <div class="card selectable " onclick="app.weatherController.changeTempStatus()" >
     <div class="text-center">
 <img src="http://openweathermap.org/img/wn/${this.icon}.png" alt="">
     </div>

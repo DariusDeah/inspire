@@ -2,11 +2,9 @@ import { ProxyState } from "../AppState.js"
 import { imageService } from "../Services/ImageService.js"
 
 function _drawImage(){
-  let template = '';
-  if (ProxyState.img) {
-    template = ProxyState.img.ImgTemplate
-  }
-  document.getElementById('bg-pic').innerHTML = template
+  document.getElementById('bg-pic').style.backgroundImage = `url(${ProxyState.img.imgUrl})`
+  document.getElementById('bg-pic').style.backgroundSize= `cover`
+  
 
 }
 

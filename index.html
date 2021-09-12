@@ -24,42 +24,49 @@
       </a>
     </nav>
   </header>
-  <main>
-    <div class="container-fluid">
-      <div id="bg-pic" class="bg-pic"></div>
 
-      <div class="row">
-        <div class="col-12">
 
-        </div>
+  <main class="container-fluid" id="bg-pic" class="bg-pic">
 
-        <div class="col-2" id="weather">
-        </div>
 
-        <section>
-          <div class="card" style="width: 18rem;">
-            <div class="card-header p-3 d-flex justify-content-between">
-              <h2>Todo-List <button class="btn btn-danger" onclick="app.taskController.deleteAllTask()">delete
-                  all</button>
-              </h2>
-              <h4 id="tasks-done">0</h4>
-              <span>/</span>
-              <h4 id="task-total">0</h4>
-            </div>
-            <ul class="list-group list-group-flush" id="task">
-            </ul>
-            <footer>
-              <h5>enter new todo </h5>
-              <form class="form" onsubmit="app.taskController.addTask(event)">
-                <input type="text" name="name">
-                <button type="submit" class="btn btn-dark">+</button>
-              </form>
-            </footer>
+
+
+
+
+    <div class="row">
+      <div class="col-lg-2" id="weather"></div>
+
+
+      <div class="col-lg-2 bg-danger">
+        <div class="card">
+          <div class="card-header p-3 d-flex justify-content-between">
+            <h2>Todo-List <button class="btn btn-danger" onclick="app.taskController.deleteAllTask()">delete
+                all</button>
+            </h2>
+            <h4 id="tasks-done">0</h4>
+            <span>/</span>
+            <h4 id="task-total">0</h4>
           </div>
+          <ul class="list-group list-group-flush" id="task">
+          </ul>
+          <footer>
+            <h5>enter new todo </h5>
+            <form class="form" onsubmit="app.taskController.addTask(event)">
+              <input type="text" name="name">
+              <button type="submit" class="btn btn-dark">+</button>
+            </form>
+          </footer>
+        </div>
       </div>
-      </section>
+
+
     </div>
+
+
+
   </main>
+
+
   <footer class="bg-dark text-light">
     <div class="text-center no-select">
       <p><small>Made with 💖 by Codeworks</small></p>
