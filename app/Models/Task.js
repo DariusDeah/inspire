@@ -11,10 +11,10 @@ export class Task{
 
   get taskTemplate() {
     return /*html*/`
- <div class="selectable">
-   <li class="list-group-item d-flex justify-content-between ${this.completed == true ? 'crossout':''}" onclick="app.taskController.checkTask('${this.id}')"  >
-
- <button class="btn btn-primary">✔</button>
+ <div class="">
+   <li class="list-group-item d-flex justify-content-between ${this.completed == true ? 'crossout':''}" >
+<button class="btn btn-warning" onclick="app.taskController.undoCheckTask('${this.id}')">undo</button>
+ <button class="btn btn-primary" onclick="app.taskController.checkTask('${this.id}')">✔</button>
  ${this.description}
  <div>
  <button class="btn btn-danger" onclick="app.taskController.deleteTask('${this.id}')">X</button>

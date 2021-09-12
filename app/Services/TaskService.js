@@ -30,15 +30,13 @@ class TaskService{
   }
 
   async undoCheckOffTask(id) {
-    let res = await sanndboxApi.get(`darius/todos/${id}`)
+    let mainRes = await sanndboxApi.get()
+    let res = await sanndboxApi.put(`darius/todos/${id}`, { completed: false })
     
-if (res.data.completed == true) {
-res.data.completed = !res.data.completed
-    }
 }
 
   async deleteTask(id) {
-    console.log(id);
+    // console.log(id);
     let res = await sanndboxApi.delete(`darius/todos/${id}`)
     console.log(res)
     ProxyState.tasks = ProxyState.tasks.filter(d => d.id !== id)

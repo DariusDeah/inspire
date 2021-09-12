@@ -52,7 +52,7 @@ form.reset()
   async checkTask(id) {
     try {
       await taskService.checkOffTask(id)
-      console.log(id)
+      // console.log(id)
     } catch(error) {
       console.error('problem with the check task in task controller',error)
     }
@@ -62,10 +62,13 @@ form.reset()
   async undoCheckTask(id) {
     try {
       await taskService.undoCheckOffTask(id)
+      console.log('this from undo task',id);
     } catch (error) {
-      console.error()
+      console.error('undo check off is btoken ',error)
     }
+    taskService.getTask()
   }
+  
   /**
    * @param {any} id
    */
