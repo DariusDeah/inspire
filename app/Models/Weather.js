@@ -5,12 +5,14 @@ export class Weather{
     this.faren = Math.floor((weatherData.main.temp - 273.1) * 9 / 5 + 32);
     this.celsi = Math.floor(weatherData.main.temp - 273.15);
     this.icon = weatherData.weather[0].icon;
+    this.location = weatherData.name
     
   }
   get weatherTemplate() {
      return /*html*/`
   <div class="card selectable " onclick="app.weatherController.changeTempStatus()" >
     <div class="text-center">
+    <h4>${this.location}</h4>
 <img src="http://openweathermap.org/img/wn/${this.icon}.png" alt="">
     </div>
     <div class="d-flex">
