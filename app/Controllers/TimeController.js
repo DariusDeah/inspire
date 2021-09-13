@@ -15,11 +15,11 @@
         hoursTime = hoursTime - 12;
    }
 // adds a 0 infront of single digit numbers
-  let hT =  (hoursTime < 10) ? ` 0${hoursTime}` : hoursTime;
-  let mT =  (minutesTime < 10) ? ` 0${minutesTime}` : minutesTime;
- let  sT = ( secondsTime < 10)  ?  ` 0${secondsTime}`: secondsTime;
+  // let hT =  (hoursTime < 10) ? ` 0${hoursTime}` : hoursTime;
+  let mT =  (minutesTime < 10) ? `0${minutesTime}` : minutesTime;
+ let  sT = ( secondsTime < 10)  ?  `0${secondsTime}`: secondsTime;
    
-   let fullTime = `${hT}:${mT}:${sT}`
+   let fullTime = `${hoursTime}:${mT}:${sT}`
    document.getElementById('time').innerText = fullTime
    document.getElementById('amPM').innerText = timeStatus
    console.log(hoursTime);
