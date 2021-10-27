@@ -73,7 +73,7 @@ form.reset()
    * @param {any} id
    */
   async deleteTask(id) {
-alert('Confirm Task Delete')
+window.confirm('Confirm Task Delete')
     try {
       
       await taskService.deleteTask(id)

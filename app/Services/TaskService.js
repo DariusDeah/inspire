@@ -35,7 +35,6 @@ this.countCompletedTask()
     console.log(res)
     ProxyState.tasks = ProxyState.tasks.filter(d => d.id !== id)
     this.updateTaskCount()
-
   }
   async countCompletedTask() {
     let res = await sanndboxApi.get(`darius/todos?completed=true`)
